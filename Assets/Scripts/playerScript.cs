@@ -8,7 +8,7 @@ public class playerScript : MonoBehaviour
     public Rigidbody2D rbplayer;
     public int PID;
     public float speed;
-    public BoxCollider2D col;
+    public Collider2D col;
     public float jumpF;
     private bool jumpR = false;
     public int points;

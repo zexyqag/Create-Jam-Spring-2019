@@ -1,24 +1,9 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 1cad4dca93166a24990b36758850e7b0
-=======
-<<<<<<< Updated upstream
-guid: 5de9e88d19d43fa4a8926e8a1ed25fea
->>>>>>> master
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 9
-<<<<<<< HEAD
-=======
-=======
-guid: 8a4984c10da724569acdefc715f7c57d
-TextureImporter:
-  fileIDToRecycleName: {}
-  externalObjects: {}
-  serializedVersion: 7
->>>>>>> Stashed changes
->>>>>>> master
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -46,12 +31,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -60,7 +45,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,10 +60,21 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -90,15 +86,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-<<<<<<< HEAD
-    spriteID: 2f1802434076be640b686563e93ecd84
-=======
-<<<<<<< Updated upstream
-    spriteID: f459bb315bbf72d4bb4a9ad7b0123591
-=======
-    spriteID: f90ad9bc611c045fc8b425c8d65b3adf
->>>>>>> Stashed changes
->>>>>>> master
+    spriteID: d019fc04c5f2d8e4db4e48a9fe3be3a6
     vertices: []
     indices: 
     edges: []
