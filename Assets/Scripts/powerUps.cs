@@ -18,6 +18,8 @@ public class powerUps : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.gameObject.name);
+
         if (collision.gameObject.layer == 9)
         {
             collision.gameObject.GetComponent<playerScript>().points++;

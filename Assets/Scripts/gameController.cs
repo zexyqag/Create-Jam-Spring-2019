@@ -9,7 +9,7 @@ public class gameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        time = Random.Range(0, 5);
+        time = Random.Range(5, 10);
 	}
 	
 	// Update is called once per frame
@@ -19,7 +19,7 @@ public class gameController : MonoBehaviour {
         time -= Time.deltaTime;
 
         if(time < 0){
-            time = Random.Range(0, 5);
+            time = Random.Range(5, 10);
             GameObject newGameObject = Instantiate(powerUp);
             newGameObject.transform.position = position;
 
