@@ -16,13 +16,12 @@ public class powerUps : MonoBehaviour {
        
 	}
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.gameObject.layer == 9)
         {
             collision.gameObject.GetComponent<playerScript>().points++;
-            Destroy(this.gameObject);
+            Destroy(this.transform.parent.gameObject);
 
         }
     }

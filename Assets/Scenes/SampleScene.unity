@@ -705,7 +705,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1489740260
 GameObject:
@@ -792,48 +792,6 @@ Transform:
   m_Father: {fileID: 809748625}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1517494506
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4826653443412410, guid: 94eae625499f54df3bf2d75cb0dcda93, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 3.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4826653443412410, guid: 94eae625499f54df3bf2d75cb0dcda93, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -2.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 4826653443412410, guid: 94eae625499f54df3bf2d75cb0dcda93, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4826653443412410, guid: 94eae625499f54df3bf2d75cb0dcda93, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4826653443412410, guid: 94eae625499f54df3bf2d75cb0dcda93, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4826653443412410, guid: 94eae625499f54df3bf2d75cb0dcda93, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4826653443412410, guid: 94eae625499f54df3bf2d75cb0dcda93, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4826653443412410, guid: 94eae625499f54df3bf2d75cb0dcda93, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 94eae625499f54df3bf2d75cb0dcda93, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &1525553977
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,6 +931,8 @@ MonoBehaviour:
   col: {fileID: 1525553981}
   jumpF: 350
   points: 0
+  direction: -1
+  bullets: {fileID: 1121962784324040, guid: 29e368fe1c83f492bbb4880c62a18ff3, type: 2}
 --- !u!1 &1597926622
 GameObject:
   m_ObjectHideFlags: 0
