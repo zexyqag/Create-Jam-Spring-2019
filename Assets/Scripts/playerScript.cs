@@ -6,6 +6,7 @@ public class playerScript : MonoBehaviour
 {
 
     public Rigidbody2D rbplayer;
+    public int PID;
     public float speed;
     public BoxCollider2D col;
     public float jumpF;
@@ -15,32 +16,28 @@ public class playerScript : MonoBehaviour
     private bool shootR = false;
     public GameObject bullets;
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
+ 
 
     void FixedUpdate()
     {
-        if(!Mathf.Approximately(Input.GetAxisRaw("Horizontal"), 0))
+        if(!Mathf.Approximately(Input.GetAxisRaw("Horizontal" + PID), 0))
         {
-            direction = (int)Input.GetAxisRaw("Horizontal");
+            direction = (int)Input.GetAxisRaw("Horizontal" + PID);
         }
 
-        rbplayer.AddForce(new Vector2(Input.GetAxisRaw("Horizontal") * speed, 0));
-        if(Mathf.Approximately(Input.GetAxisRaw("Jump"), 1)){
+        rbplayer.AddForce(new Vector2(Input.GetAxisRaw("Horizontal" + PID) * speed, 0));
+        if(Mathf.Approximately(Input.GetAxisRaw("Jump" + PID), 1)){
             if(jumpR == false){
                 jumpR = true;
-                rbplayer.AddForce(new Vector2(0, (col.IsTouchingLayers(LayerMask.GetMask("Floor")) ? 1 : 0) * jumpF * Input.GetAxisRaw("Jump")));
+                rbplayer.AddForce(new Vector2(0, (col.IsTouchingLayers(LayerMask.GetMask("Floor")) ? 1 : 0) * jumpF * Input.GetAxisRaw("Jump" + PID)));
             }
         }
-        if(Mathf.Approximately(Input.GetAxisRaw("Jump"), 0)){
+        if(Mathf.Approximately(Input.GetAxisRaw("Jump" + PID), 0)){
             jumpR = false;
         }
 
 
-        if (Mathf.Approximately(Input.GetAxisRaw("Shoot"), 1))
+        if (Mathf.Approximately(Input.GetAxisRaw("Shoot" + PID), 1))
         {
             if (shootR == false)
             {
@@ -50,7 +47,7 @@ public class playerScript : MonoBehaviour
                 bullet.gameObject.GetComponent<projectile>().direction = direction;
             }
         }
-        if (Mathf.Approximately(Input.GetAxisRaw("Shoot"), 0))
+        if (Mathf.Approximately(Input.GetAxisRaw("Shoot" + PID), 0))
         {
             shootR  = false;
         }
