@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361500229111564}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.04, y: -0.01, z: 0}
-  m_LocalScale: {x: 4.573143, y: 4.573143, z: 4.573143}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -120,14 +120,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.25, y: 0.25}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.33, y: 0.32}
+  m_Size: {x: 0.18, y: 0.92}
   m_EdgeRadius: 0
 --- !u!114 &114408570481291458
 MonoBehaviour:
@@ -145,7 +145,7 @@ MonoBehaviour:
   PID: 0
   speed: 10
   col: {fileID: 61074545286280234}
-  jumpF: 500
+  jumpF: 300
   points: 0
   direction: -1
   bullets: {fileID: 1121962784324040, guid: 29e368fe1c83f492bbb4880c62a18ff3, type: 3}

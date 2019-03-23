@@ -43,8 +43,10 @@ public class playerScript : MonoBehaviour
             {
                 shootR = true;
                 GameObject bullet = Instantiate(bullets);
+
                 bullet.transform.position = this.gameObject.transform.position;
-                bullet.gameObject.GetComponent<projectile>().direction = direction;
+                bullet.GetComponentInChildren<projectile>().direction = direction;
+                bullet.GetComponentInChildren<projectile>().player = this.gameObject;
             }
         }
         if (Mathf.Approximately(Input.GetAxisRaw("Shoot" + PID), 0))

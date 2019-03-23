@@ -18,4 +18,18 @@ public class projectile : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if ((collision.gameObject.layer == 8 || collision.gameObject.layer == 9 || collision.gameObject.layer == 12 || collision.gameObject.layer == 11) && collision.gameObject != player)
+        {
+            if (collision.gameObject.layer == 9)
+            {
+                collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, collision.gameObject.GetComponent<Rigidbody2D>().velocity.y);
+                collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(direction * 250, 0));
+            }
+
+            Destroy(this.transform.parent.gameObject);
+        }
+    }
 }

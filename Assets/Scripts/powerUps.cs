@@ -17,7 +17,7 @@ public class powerUps : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (frameRates < 0){
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = this.gameObject.GetComponent<SpriteRenderer>().sprite ? frame1 : frame2;
+            //this.gameObject.GetComponent<SpriteRenderer>().sprite = this.gameObject.GetComponent<SpriteRenderer>().sprite ? frame1 : frame2;
             frameRates = 1;
 
 
@@ -30,7 +30,6 @@ public class powerUps : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
 
         if (collision.gameObject.layer == 9)
         {

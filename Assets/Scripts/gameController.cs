@@ -15,7 +15,7 @@ public class gameController : MonoBehaviour
         for (int i = 0; i < 2; i++){
             timers[i] = intialTimes[i];
         }
-        for (int i = 0; i < 4; i++){
+        for (int i = 0; i < 2; i++){
             GameObject Player = Instantiate(player);
             Player.gameObject.GetComponent<playerScript>().PID = i + 1;
         }
