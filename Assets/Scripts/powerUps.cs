@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class powerUps : MonoBehaviour {
 
-    public playerScript ps;
 
 	// Use this for initialization
 	void Start () {
