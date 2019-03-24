@@ -15,7 +15,7 @@ public class playerScript : MonoBehaviour
     public int direction;
     private bool shootR = false;
     public GameObject bullets;
-
+    public AudioClip shooting, jumping;
  
 
     void FixedUpdate()
@@ -29,6 +29,14 @@ public class playerScript : MonoBehaviour
         if(Mathf.Approximately(Input.GetAxisRaw("Jump" + PID), 1)){
             if(jumpR == false){
                 jumpR = true;
+
+                if (col.IsTouchingLayers(LayerMask.GetMask("Floor")))
+                {
+ 
+                    this.GetComponent<AudioSource>().clip = jumping;
+                    this.GetComponent<AudioSource>().Play();
+                }
+
                 rbplayer.AddForce(new Vector2(0, (col.IsTouchingLayers(LayerMask.GetMask("Floor")) ? 1 : 0) * jumpF * Input.GetAxisRaw("Jump" + PID)));
             }
         }
@@ -42,6 +50,8 @@ public class playerScript : MonoBehaviour
             if (shootR == false)
             {
                 shootR = true;
+                this.GetComponent<AudioSource>().clip = shooting;
+                this.GetComponent<AudioSource>().Play();
                 GameObject bullet = Instantiate(bullets);
 
                 bullet.transform.position = this.gameObject.transform.position;
