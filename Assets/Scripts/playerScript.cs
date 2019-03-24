@@ -16,13 +16,37 @@ public class playerScript : MonoBehaviour
     private bool shootR = false;
     public GameObject bullets;
     public AudioClip shooting, jumping;
+    private SpriteRenderer spr;
+    private Sprite[] sprites;
+    private float frameCoolDown;
+
+    private void Start()
+    {
+        spr = GetComponent<SpriteRenderer>();
+        sprites = Resources.LoadAll<Sprite>("player1");
+    }
+
+    void Update()
+    {
+        frameCoolDown -= rbplayer.velocity.magnitude/speed;
+
+        if (frameCoolDown < 0)
+        {
+            frameCoolDown = 1;
+            spr.sprite = spr.sprite == sprites[0] ? sprites[1] : sprites[0];
+        }
+
+
  
+    }
+
 
     void FixedUpdate()
     {
         if(!Mathf.Approximately(Input.GetAxisRaw("Horizontal" + PID), 0))
         {
             direction = (int)Input.GetAxisRaw("Horizontal" + PID);
+            spr.flipX = direction == 1 ? false : true;
         }
 
         rbplayer.AddForce(new Vector2(Input.GetAxisRaw("Horizontal" + PID) * speed, 0));

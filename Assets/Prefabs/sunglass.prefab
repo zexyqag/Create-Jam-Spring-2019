@@ -200,5 +200,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 10
-  frame1: {fileID: 21300000, guid: 4aabe3d6c4bad4d3d83f8d357e85155b, type: 3}
-  frame2: {fileID: 21300000, guid: a1e2c71536da24652b8b42c59e3f4364, type: 3}
+  sprites:
+  - {fileID: 21300000, guid: 4aabe3d6c4bad4d3d83f8d357e85155b, type: 3}
+  - {fileID: 21300000, guid: a1e2c71536da24652b8b42c59e3f4364, type: 3}

@@ -5,27 +5,24 @@ using UnityEngine;
 public class powerUps : MonoBehaviour {
 
     public int point;
-    public Sprite frame1, frame2;
-    private float frameRates;
+    private SpriteRenderer spr;
+    public Sprite[] sprites;
+    private float frameCoolDown;
 
-	// Use this for initialization
-	void Start () {
-      
-
+    // Use this for initialization
+    void Start () {
+        spr = transform.parent.gameObject.GetComponent<SpriteRenderer>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (frameRates < 0){
-            //this.gameObject.GetComponent<SpriteRenderer>().sprite = this.gameObject.GetComponent<SpriteRenderer>().sprite ? frame1 : frame2;
-            frameRates = 1;
 
-
-        }else{
-            frameRates -= Time.deltaTime;
+        frameCoolDown -= Time.deltaTime;
+        if (frameCoolDown < 0)
+        {
+            frameCoolDown = 0.5f;
+            spr.sprite = spr.sprite == sprites[0] ? sprites[1] : sprites[0];
         }
-
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
